@@ -1,0 +1,133 @@
+body {
+    font-family: sans-serif;
+    font-palette: aliceblue;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://cdn.hackclub.com/01a1b82e-d2e4-709e-aa6c-489478a26804/sayabackground.jpg");
+
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+
+    transform: scale(1.05);
+
+    z-index: -1;
+}
+
+
+h1 {
+    color: hotpink;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Momo Trust Display", serif;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+
+    color: white;
+    position: absolute;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+
+.ventanas {
+    border: solid;
+    width: 500px;
+    background-color: white;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.pfp {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+
+.githubButton {
+    border: none;
+    border-radius: 15px;
+    background-color: hotpink;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    font-family: "Momo Trust Display", serif;
+}
+
+
+
+#reloj{
+    font-family: sans-serif;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 10px;
+}
+
+#topbar {
+    font: bold 14px "sans-serif";
+    color: white;
+    padding: 4px 12px;
+    border-radius: 10px;
+}
+
+#topbar:hover {
+font-family: sans-serif;
+color: white;
+padding: 4px 12px;
+border-radius: 10px;
+}
+
+
+.redaction-50-regular {
+    font-family: "Redaction 50", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.redaction-50-bold {
+    font-family: "Redaction 50", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.redaction-50-regular-italic {
+    font-family: "Redaction 50", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.momo-trust-display-regular {
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
