@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: sans-serif;
     font-palette: aliceblue;
@@ -6,7 +11,7 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
-
+    min-height: 100vh;
 }
 
 body::before {
@@ -39,28 +44,70 @@ h1 {
 }
 
 .topbar {
+    position: fixed;
+    top: 16px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 28px;
+
     display: flex;
     justify-content: space-between;
-    padding: 5px 25px;
-
-    color: white;
-    position: absolute;
-    width: 100%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.25);
+    align-items: center;
+    background: transparent;
+    pointer-events: none;
+    z-index: 10;
 }
 
+.topbar p,
+#reloj {
+    margin: 0;
+    pointer-events: auto;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    color: #431242;
+
+    width: 150px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    padding: 0;
+    background: rgb(255 105 180);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 2.5px solid rgb(252 235 255 / 0.95);
+    border-radius: 9999px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.7);
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.topbar p:hover,
+#reloj:hover {
+    transform: translateY(-2px);
+    background: rgb(252 235 255 / 0.95);
+}
 
 
 .ventanas {
     border: solid;
+    border-color: pink;
+    border-radius: 5%;
     width: 500px;
-    background-color: white;
+    background-color: rgba(237, 237, 237, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 16px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+
 
 }
 
